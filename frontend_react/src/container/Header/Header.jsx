@@ -17,7 +17,7 @@ const scaleVariants = {
 const Header = () => {
     return (
         <div id='home' className='app__header app__flex'>
-            <motion.dev
+            <motion.div
                 whileInView={{x: [-100, 0], opacity: [0, 1]}}
                 transition={{duration: 0.5}}
                 className='app__header-info'
@@ -36,9 +36,9 @@ const Header = () => {
                     </div>
                 </div>
 
-            </motion.dev>
+            </motion.div>
 
-            <motion.dev
+            <motion.div
                 whileInView={{ opacity: [0, 1]}}
                 transition={{duration: 0.5, delayChildren: 0.5}}
                 className='app__header-img'
@@ -51,9 +51,9 @@ const Header = () => {
                     src={images.circle}
                     alt='profile_circle'
                 />
-            </motion.dev>
+            </motion.div>
 
-            <motion.dev
+            <motion.div
                 variant={scaleVariants}
                 whileInView={scaleVariants.whileInView}
                 className='app__header-circles'
@@ -63,7 +63,7 @@ const Header = () => {
                         <img src={circle} alt='circle'/>
                     </div>
                 ))}
-            </motion.dev>
+            </motion.div>
         </div>
     );
 };

@@ -65,6 +65,7 @@ const Work = () => {
 
                             <motion.div
                                 whileHover={{opacity: [0, 1]}}
+                                whileInView={{opacity: [1, 0]}}
                                 transition={{duration: .25, ease: 'easeInOut', staggerChildren: .5}}
                                 className='app__work-hover app__flex'
                             >

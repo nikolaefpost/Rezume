@@ -4,7 +4,7 @@ import ReactTooltip from "react-tooltip";
 import {motion} from "framer-motion";
 
 import {urlFor, client} from "../../client";
-import {AppWrap} from "../../wrapper";
+import {AppWrap, MotionWrap} from "../../wrapper";
 
 import './Skills.scss'
 import {logDOM} from "@testing-library/react";
@@ -12,7 +12,6 @@ import {logDOM} from "@testing-library/react";
 const Skills = () => {
 
     const [experience, setExperience] = useState([]);
-    console.log(experience)
     const [skills, setSkills] = useState([]);
 
     useEffect(()=>{
@@ -94,4 +93,8 @@ const Skills = () => {
     );
 };
 
-export default AppWrap(Skills, 'skills');
+export default AppWrap(
+    MotionWrap(Skills, 'app__skills'),
+    'skills',
+    'app__whitebg'
+);

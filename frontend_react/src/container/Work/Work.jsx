@@ -4,15 +4,13 @@ import {AiFillEye, AiFillGithub} from "react-icons/ai";
 import {motion} from "framer-motion";
 
 import {urlFor, client} from "../../client";
-import {AppWrap} from "../../wrapper";
+import {AppWrap, MotionWrap} from "../../wrapper";
 
 const Work = () => {
     const [activeFilter, setActiveFilter] = useState('All')
     const [animateCard, setAnimateCard] = useState([{y: 0, opacity: 1}])
     const [works, setWorks] = useState([])
     const [filterWorks, setFilterWorks] = useState([])
-
-    console.log(works)
 
     useEffect(()=>{
         const query = '*[_type == "works"]';
@@ -69,7 +67,7 @@ const Work = () => {
                                 transition={{duration: .25, ease: 'easeInOut', staggerChildren: .5}}
                                 className='app__work-hover app__flex'
                             >
-                                <a href={work.projectLink} target='blank' rel='noreferrer'>
+                                {!!work.projectLink && <a href={work.projectLink} target='blank' rel='noreferrer'>
                                     <motion.div
                                         whileInView={{scale: [0, 1]}}
                                         whileHover={{scale: [0, 0.9]}}
@@ -78,7 +76,7 @@ const Work = () => {
                                     >
                                         <AiFillEye/>
                                     </motion.div>
-                                </a>
+                                </a>}
                                 <a href={work.codeLink} target='blank' rel='noreferrer'>
                                     <motion.div
                                         whileInView={{scale: [0, 1]}}
@@ -105,5 +103,8 @@ const Work = () => {
         </>
     );
 };
-
-export default AppWrap(Work, 'work');
+export default AppWrap(
+    MotionWrap(Work, 'app__works'),
+    'work',
+    'app__primarybg'
+);

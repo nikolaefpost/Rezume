@@ -20,7 +20,6 @@ const Skills = () => {
 
         client.fetch(queryEx)
             .then((data)=>{
-                console.log(data)
                 setExperience(data)
             })
         client.fetch(querySk)

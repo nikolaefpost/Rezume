@@ -5,12 +5,6 @@ import {images} from "../../constants";
 import {client, urlFor} from "../../client"
 import {AppWrap, MotionWrap} from "../../wrapper";
 
-const abouts = [
-    {title: 'Web Development', description: 'I am a frontend with a passion for beautiful and functional web applications', imgUrl: images.about01},
-    {title: 'Web Designer', description: 'I am a good web designer with a passion for beautiful and functional websites', imgUrl: images.about02},
-    {title: 'UI/UX', description: 'I am a web designer with a passion for creating ', imgUrl: images.about03},
-    {title: 'Web Animations', description: 'I am a good web development', imgUrl: images.about04},
-]
 
 const About = () => {
     const [about, setAbout] = useState([])

@@ -7,7 +7,6 @@ import {urlFor, client} from "../../client";
 import {AppWrap, MotionWrap} from "../../wrapper";
 
 import './Skills.scss'
-import {logDOM} from "@testing-library/react";
 
 const Skills = () => {
 
@@ -15,8 +14,8 @@ const Skills = () => {
     const [skills, setSkills] = useState([]);
 
     useEffect(()=>{
-        const queryEx = '*[_type == "experiences"]';
-        const querySk = '*[_type == "skills"]';
+        const queryEx = '*[_type == "experiences"]| order(year asc)';
+        const querySk = '*[_type == "skills"]| order(name asc)';
 
         client.fetch(queryEx)
             .then((data)=>{

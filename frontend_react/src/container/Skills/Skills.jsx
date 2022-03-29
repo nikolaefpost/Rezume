@@ -9,7 +9,6 @@ import {AppWrap, MotionWrap} from "../../wrapper";
 import './Skills.scss'
 
 const Skills = () => {
-
     const [experience, setExperience] = useState([]);
     const [skills, setSkills] = useState([]);
 

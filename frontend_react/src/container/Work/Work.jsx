@@ -35,6 +35,9 @@ const Work = () => {
           }
       }, 500)
     }
+
+    const widthScreen = window.screen.width > 900
+    console.log(widthScreen)
     return (
         <>
             <h2 className='head-text'>My Creative <span>Portfolio</span> section</h2>
@@ -83,7 +86,7 @@ const Work = () => {
 
                             <motion.div
                                 whileHover={{opacity: [0, 1]}}
-                                whileInView={{opacity: [1, 0]}}
+                                whileInView={widthScreen ? {opacity: [1, 0]}: {opacity: [1, 0.3]}}
                                 transition={{duration: .25, ease: 'easeInOut', staggerChildren: .5}}
                                 className='app__work-hover app__flex'
                             >

@@ -22,6 +22,15 @@
     border-radius: 50%;
     object-fit: cover;
   }
+
+  svg{
+    width: 140px;
+    height: 140px;
+    color: #AAA;
+    //border-radius: 50%;
+    //border: 1px solid black;
+    object-fit: cover;
+  }
   @media screen and (min-width: 2000px){
     min-height: 450px;
 

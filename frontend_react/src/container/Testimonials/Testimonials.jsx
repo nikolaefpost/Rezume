@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {motion} from "framer-motion";
-import {HiChevronLeft, HiChevronRight} from "react-icons/hi";
+import {HiChevronLeft, HiChevronRight, HiUserCircle} from "react-icons/hi";
+import {FaUserCircle} from "react-icons/fa"
 import {urlFor, client} from "../../client";
 import './Testimonials.scss'
 import {AppWrap, MotionWrap} from "../../wrapper";
@@ -25,7 +26,7 @@ const Testimonials = () => {
             })
         client.fetch(queryBrand)
             .then((data)=>{
-                setBrands(data)
+                setBrands(data.filter((item)=>item.imgUrl))
             })
     },[])
 
@@ -36,7 +37,7 @@ const Testimonials = () => {
             {testimonials.length && (
                <>
                    <div className='app__testimonial-item app__flex'>
-                       <img src={urlFor(test.imgurl)} alt='testimonial'/>
+                       {test.imgurl ? <img src={urlFor(test.imgurl)} alt='testimonial'/>:<FaUserCircle/>}
                        <div className='app__testimonial-content'>
                            <p className='p-text'>
                                {test.feedback}
@@ -61,6 +62,7 @@ const Testimonials = () => {
                                0 : currentIndex+1)}
                        >
                            <HiChevronRight/>
+
                        </div>
                    </div>
                </>
@@ -72,7 +74,7 @@ const Testimonials = () => {
                         transition={{duration: .5, type: 'tween'}}
                         key={brand._id}
                     >
-                        <img src={urlFor(brand.imgUrl)} alt={brand.name}/>
+                        <img src={brand.imgUrl && urlFor(brand.imgUrl)} alt={brand.name}/>
                     </motion.div>
                 ))}
             </div>

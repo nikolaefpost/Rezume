@@ -44,7 +44,7 @@ const Work = () => {
 
             <div className='app__work-filter'>
 
-                <div className='app__flex'>
+                <div className=' stretch'>
                     {['Web App', 'Web App fragment', 'Website', 'Landing Page'].map((item, index)=>(
                         <div
                             key={index}

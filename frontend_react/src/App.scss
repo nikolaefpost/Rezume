@@ -148,6 +148,34 @@
   }
 }
 
+.app__social-mobil{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 0;
+
+  div {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    margin: 0.25rem 0.5rem;
+    border: 1px solid var(--lightGray-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      color: var(--gray-color);
+    }
+  }
+}
+
+
 .app__navigation {
   display: flex;
   justify-content: center;
@@ -178,11 +206,17 @@
 
 @media screen and (max-width: 500px) {
   .app__navigation,
-  .app__social {
+  .app__social{
     display: none;
   }
 
   .copyright {
-    padding: 2rem;
+    padding: 0;
+    flex-direction: row;
+    justify-content: center;
+
+    & p:last-child{
+      margin-left: .5rem;
+    }
   }
 }

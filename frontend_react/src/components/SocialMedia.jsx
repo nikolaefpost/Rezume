@@ -3,9 +3,9 @@ import {BsTwitter, BsInstagram, BsLinkedin} from "react-icons/bs";
 import {FaFacebook} from "react-icons/fa";
 import {FACEBOOK, INSTA, LINKEDIN} from "../constants";
 
-const SocialMedia = () => {
+const SocialMedia = ({classNames}) => {
     return (
-        <div className='app__social'>
+        <div className={classNames}>
             <div onClick={() => window.open(LINKEDIN)}>
                 <BsLinkedin/>
             </div>

@@ -6,7 +6,6 @@ import {HiMenuAlt4, HiX} from "react-icons/hi";
 
 
 const Navbar = () => {
-    const [toggle, setToggle] = useState(false)
     const [isVisible, setVisible] = useState(false)
 
     const handleVisible = () => {
@@ -34,7 +33,7 @@ const Navbar = () => {
                             initial={{x: 300, opacity: 0}}
                             animate={{x: 0, opacity: 1}}
                             exit={{x: 300, opacity: 0}}
-                            transition={{duration: 0.5, delayChildren: 0.85, ease: 'easeOut'}}
+                            transition={{duration: 0.85, delayChildren: 0.85, ease: 'easeOut'}}
                         >
                             <ul>
                                 <HiX onClick={handleVisible}/>
@@ -49,25 +48,6 @@ const Navbar = () => {
                 </AnimatePresence>
 
             </div>
-            {/*<div className='app__navbar-menu'>*/}
-            {/*    <HiMenuAlt4 onClick={() => setToggle(true)}/>*/}
-            {/*    {toggle && (*/}
-            {/*        <motion.div*/}
-            {/*            whileInView={{x: [300, 0], opacity: [0, 1]}}*/}
-            {/*            // whileInView={{opacity: [0, 1]}}*/}
-            {/*            transition={{duration: 0.5, delayChildren: 0.85, ease: 'easeOut'}}*/}
-            {/*        >*/}
-            {/*            <ul>*/}
-            {/*                <HiX onClick={() => setToggle(false)}/>*/}
-            {/*                {['home', 'about', 'work', 'skills', 'contact'].map((item) => (*/}
-            {/*                    <li key={item}>*/}
-            {/*                        <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>*/}
-            {/*                    </li>*/}
-            {/*                ))}*/}
-            {/*            </ul>*/}
-            {/*        </motion.div>*/}
-            {/*    )}*/}
-            {/*</div>*/}
         </nav>
     );
 };

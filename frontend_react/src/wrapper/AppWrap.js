@@ -1,20 +1,19 @@
 import React from 'react';
-import {NavigationDots, SocialMedia} from "../components";
+import {Copyright, NavigationDots, SocialMedia} from "../components";
+import {logDOM} from "@testing-library/react";
 
 
 
 
 const AppWrap = (Component, idName, classNames) => function HOC() {
+    const widthScreen = window.screen.width > 500;
     return (
         <div id={idName} className={`app__container ${classNames}`}>
-            <SocialMedia/>
+            <SocialMedia classNames='app__social'/>
             <div className='app__wrapper app__flex'>
                 <Component/>
 
-                <div className='copyright'>
-                    <p className='p-text'>© 2022 Pilot</p>
-                    <p className='p-text'>All right reserved</p>
-                </div>
+                {!!widthScreen && <Copyright/>}
             </div>
             <NavigationDots active={idName}/>
         </div>

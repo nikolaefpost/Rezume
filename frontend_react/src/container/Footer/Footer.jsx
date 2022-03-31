@@ -2,10 +2,13 @@ import React, {useState} from 'react';
 
 import {images} from "../../constants";
 import {AppWrap, MotionWrap} from "../../wrapper";
+import {motion, AnimatePresence} from "framer-motion";
 import {client} from "../../client";
 import './Footer.scss'
+import {Copyright, SocialMedia} from "../../components";
 
 const Footer = () => {
+    const widthScreen = window.screen.width > 500;
     const [formData, setFormData] = useState({name: '', email: '', message: ''});
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -14,7 +17,6 @@ const Footer = () => {
 
     const handleChangeInput = (e) => {
         const {name, value} = e.target
-        console.log(e.target.value)
         setFormData({...formData, [name]: value})
     }
 
@@ -80,7 +82,13 @@ const Footer = () => {
                     <h3 className='head-text'>Thank you for getting in touch!</h3>
                 </div>
             }
-
+            {!widthScreen && <motion.div
+                whileInView={{y: [100, 50, 0], opacity: [0, 0, 1]}}
+                transition={{duration: .5}}
+            >
+                <SocialMedia classNames='app__social-mobil'/>
+                <Copyright/>
+            </motion.div>}
         </>
     );
 };

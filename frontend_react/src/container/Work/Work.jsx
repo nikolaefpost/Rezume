@@ -8,7 +8,7 @@ import {AppWrap, MotionWrap} from "../../wrapper";
 
 const Work = () => {
     const [activeFilter, setActiveFilter] = useState('All')
-    const [animateCard, setAnimateCard] = useState([{y: 0, opacity: 1}])
+    const [animateCard, setAnimateCard] = useState([{y: 0, scale: 1, opacity: 1}])
     const [works, setWorks] = useState([])
     const [filterWorks, setFilterWorks] = useState([])
 
@@ -23,10 +23,10 @@ const Work = () => {
     },[])
     const handleWorkFilter = (item) => {
       setActiveFilter(item);
-      setAnimateCard([{y: 100, opacity: 0}]);
+      setAnimateCard([{y: 100, scale: 0.7, opacity: 0}]);
 
       setTimeout(()=>{
-          setAnimateCard([{y: 0, opacity: 1}]);
+          setAnimateCard([{y: 0, scale: 1, opacity: 1}]);
 
           if(item === 'All') {
               setFilterWorks(works)
@@ -36,8 +36,7 @@ const Work = () => {
       }, 500)
     }
 
-    const widthScreen = window.screen.width > 900
-    console.log(widthScreen)
+    const widthScreen = window.screen.width > 900;
     return (
         <>
             <h2 className='head-text'>My Creative <span>Portfolio</span> section</h2>

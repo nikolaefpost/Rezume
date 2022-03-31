@@ -32,6 +32,10 @@
       padding: 1rem 2rem;
       border-radius: .85rem;
     }
+
+    @media screen and (max-width: 400px){
+      margin: .25rem;
+    }
   }
 
   .item-active{
@@ -155,5 +159,4 @@
 .stretch{
   display: flex;
   justify-content: center;
-  align-items: stretch;
 }

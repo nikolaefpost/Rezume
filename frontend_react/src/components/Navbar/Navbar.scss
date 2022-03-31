@@ -171,3 +171,14 @@
   }
 }
 
+.download{
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  svg{
+    margin-bottom: .25rem;
+  }
+}
+

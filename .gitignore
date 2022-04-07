@@ -1,3 +1,5 @@
 /backend_sanity/node_modules/
 readme.txt
 .env
+frontend_react/src/container/Test/Test.js
+frontend_react/src/container/Test/Test.scss

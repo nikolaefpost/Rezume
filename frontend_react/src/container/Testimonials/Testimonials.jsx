@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {motion} from "framer-motion";
-import {HiChevronLeft, HiChevronRight, HiUserCircle} from "react-icons/hi";
+import {HiChevronLeft, HiChevronRight} from "react-icons/hi";
 import {FaUserCircle} from "react-icons/fa"
 import {urlFor, client} from "../../client";
 import './Testimonials.scss'

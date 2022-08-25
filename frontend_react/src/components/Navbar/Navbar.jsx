@@ -49,7 +49,7 @@ const Navbar = () => {
                                     </li>
                                 ))}
                                 <li>
-                                    <a href='JUNIOR FROND-END DEVELOPER (React).xlsx' className='download' download=""  title="download resume"><span>Resume</span><IoMdDownload/></a>
+                                    <a href='JUNIOR FROND-END DEVELOPER (React).en.pdf' className='download' download=""  title="download resume"><span>Resume</span><IoMdDownload/></a>
                                 </li>
                             </ul>
                         </motion.div>

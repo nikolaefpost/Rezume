@@ -26,7 +26,7 @@ const Navbar = () => {
                 ))}
                 <li className='app__flex p-text' >
                     <div/>
-                    <a href='JUNIOR FROND-END DEVELOPER (React).pdf' download="" className='download' title="download resume"><IoMdDownload/><span>Resume</span></a>
+                    <a href='JUNIOR FROND-END DEVELOPER (React).en.pdf' download="" className='download' title="download resume"><IoMdDownload/><span>Resume</span></a>
                 </li>
             </ul>
 

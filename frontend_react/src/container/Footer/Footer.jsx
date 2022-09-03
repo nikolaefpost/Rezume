@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import {images} from "../../constants";
 import {AppWrap, MotionWrap} from "../../wrapper";
-import {motion, AnimatePresence} from "framer-motion";
+import {motion} from "framer-motion";
 import {client} from "../../client";
 import './Footer.scss'
 import {Copyright, SocialMedia} from "../../components";
@@ -49,7 +49,7 @@ const Footer = () => {
                 </div>
                 <div className='app__footer-card'>
                     <img src={images.mobile} alt='mobile'/>
-                    <a href='tel: +38 (093) 982-4980' className='p-text'>+38 (093) 982-4980</a>
+                    <a href='tel: +38 (093) 656-2780' className='p-text'>+38 (093) 982-4980</a>
                 </div>
             </div>
 

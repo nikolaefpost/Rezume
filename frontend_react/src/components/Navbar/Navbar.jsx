@@ -26,7 +26,7 @@ const Navbar = () => {
                 ))}
                 <li className='app__flex p-text' >
                     <div/>
-                    <a href='JUNIOR FROND-END DEVELOPER (React).en.pdf' download="" className='download' title="download resume"><IoMdDownload/><span>Resume</span></a>
+                    <a href='YEMELIANOV_FRONTEND_DEVELOPER_(React).pdf' download="" className='download' title="download resume"><IoMdDownload/><span>Resume</span></a>
                 </li>
             </ul>
 
@@ -49,7 +49,7 @@ const Navbar = () => {
                                     </li>
                                 ))}
                                 <li>
-                                    <a href='JUNIOR FROND-END DEVELOPER (React).en.pdf' className='download' download=""  title="download resume"><span>Resume</span><IoMdDownload/></a>
+                                    <a href='YEMELIANOV_FRONTEND_DEVELOPER_(React).pdf' className='download' download=""  title="download resume"><span>Resume</span><IoMdDownload/></a>
                                 </li>
                             </ul>
                         </motion.div>

@@ -7,7 +7,6 @@ import {client} from "../../client";
 import './Footer.scss'
 import {Copyright, SocialMedia} from "../../components";
 
-
 const Footer = () => {
     const widthScreen = window.screen.width > 500;
     const [formData, setFormData] = useState({name: '', email: '', message: ''});
